@@ -34,7 +34,7 @@
         OverrideFirstRunPage = "";
         OverridePostUpdatePage = "";
         DontCheckDefaultBrowser = true;
-        DisplayBookmarksToolbar = "never"; # alternatives: "always" or "newtab"
+        DisplayBookmarksToolbar = "always"; # alternatives: "always" or "newtab"
         DisplayMenuBar = "default-off"; # alternatives: "always", "never" or "default-on"
         SearchBar = "unified"; # alternative: "separate"
 
@@ -52,6 +52,11 @@
           # Privacy Badger:
           "jid1-MnnxcxisBPnSXQ@jetpack" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi";
+            installation_mode = "force_installed";
+          };
+          # KeepassXC:
+          "keepassxc-browser@keepassxc.org" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/keepassxc-browser/latest.xpi";
             installation_mode = "force_installed";
           };
         };
