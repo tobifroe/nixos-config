@@ -26,6 +26,7 @@ in
     lazygit
     libnotify
 	  man-pages					            	  # extra man pages
+	  minikube
     mpv                               # video player
     ncdu                              # disk space
     nextcloud-client
