@@ -15,7 +15,6 @@
     ./micro.nix                       # nano replacement
     ./nvim.nix                        # neovim editor
     ./packages.nix                    # other packages
-    ./retroarch.nix  
     ./rofi.nix                        # launcher
     ./scripts/scripts.nix             # personal scripts
     ./spicetify.nix                   # spotify client

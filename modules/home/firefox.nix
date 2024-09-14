@@ -31,6 +31,7 @@
         DisableFirefoxAccounts = true;
         DisableAccounts = true;
         DisableFirefoxScreenshots = true;
+        OfferToSaveLogins = false;
         OverrideFirstRunPage = "";
         OverridePostUpdatePage = "";
         DontCheckDefaultBrowser = true;

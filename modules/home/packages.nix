@@ -21,8 +21,8 @@ in
     gtrash                            # rm replacement, put deleted files in system trash
     hexdump
     imv                               # image viewer
-    keepassxc
     killall
+    kubectl
     lazygit
     libnotify
 	  man-pages					            	  # extra man pages
@@ -64,8 +64,10 @@ in
     audacity
     bleachbit                         # cache cleaner
     gimp
+    keepassxc
     libreoffice
     nix-prefetch-github
+    obsidian
     pavucontrol                       # pulseaudio volume controle (GUI)
     qalculate-gtk                     # calculator
     soundwireserver                   # pass audio to android phone

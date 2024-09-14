@@ -1,6 +1,7 @@
 { inputs, nixpkgs, self, username, host, ...}:
 {
   imports = [
+    ./bluetooth.nix
     ./bootloader.nix
     ./hardware.nix
     ./xserver.nix
