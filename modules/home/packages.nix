@@ -37,6 +37,7 @@ in
     playerctl                         # controller for media players
     poweralertd
     programmer-calculator
+    pipewire.jack
     qview                             # minimal image viewer
     ripgrep                           # grep replacement
     tdf                               # cli pdf viewer
@@ -70,6 +71,7 @@ in
     obsidian
     pavucontrol                       # pulseaudio volume controle (GUI)
     qalculate-gtk                     # calculator
+    reaper
     soundwireserver                   # pass audio to android phone
     vlc
     winetricks
