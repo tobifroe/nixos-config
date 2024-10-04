@@ -63,7 +63,6 @@ in
 
     ## GUI Apps
     audacity
-    bleachbit                         # cache cleaner
     gimp
     keepassxc
     libreoffice
@@ -73,10 +72,10 @@ in
     qalculate-gtk                     # calculator
     reaper
     soundwireserver                   # pass audio to android phone
+    veracrypt
     vlc
     winetricks
     wineWowPackages.wayland
-    zenity
 
     # C / C++
     gcc
