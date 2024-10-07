@@ -63,6 +63,7 @@ in
 
     ## GUI Apps
     audacity
+    calibre
     gimp
     keepassxc
     libreoffice
