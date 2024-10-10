@@ -11,6 +11,8 @@
       credential.helper = "store";
       merge.conflictstyle = "diff3";
       diff.colorMoved = "default";
+      commit.gpgsign = "true";
+      user.signingkey = "4A5C96BC94C0CCBE958A79FCF0C1C1FE2949F6F5";
     };
 
     delta = {
