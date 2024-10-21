@@ -72,6 +72,7 @@ in
     pavucontrol                       # pulseaudio volume controle (GUI)
     qalculate-gtk                     # calculator
     reaper
+    signal-desktop
     soundwireserver                   # pass audio to android phone
     veracrypt
     vlc
