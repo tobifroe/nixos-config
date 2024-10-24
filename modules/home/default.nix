@@ -1,5 +1,6 @@
 {inputs, username, host, ...}: {
   imports = [
+    ./audacious.nix                   # music player
     ./bat.nix                         # better cat command
     ./btop.nix                        # resouces monitor 
     ./discord/discord.nix                     # discord with catppuccin theme
