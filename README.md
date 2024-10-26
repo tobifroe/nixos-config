@@ -218,7 +218,6 @@ Keybindings
 - ```$mainMod, Escape, exec, swaylock```
 - ```ALT, Escape, exec, hyprlock```
 - ```$mainMod SHIFT, Escape, exec, power-menu```
-- ```$mainMod, P, pseudo,```
 - ```$mainMod, J, togglesplit,```
 - ```$mainMod, T, exec, toggle_oppacity```
 - ```$mainMod, E, exec, nautilus```
@@ -229,7 +228,7 @@ Keybindings
 - ```$mainMod SHIFT, W, exec, vm-start```
 
 ##### screenshot
-- ```$mainMod, Print, exec, grimblast --notify --cursor --freeze save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png```
+- ```$mainMod, p, exec, grimblast --notify --cursor --freeze save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png```
 - ```,Print, exec, grimblast --notify --cursor --freeze copy area```
 
 ##### switch focus
@@ -317,7 +316,7 @@ First install nixos using any [graphical ISO image](https://nixos.org/download.h
 
 ```bash
 nix-shell -p git
-git clone https://github.com/Frost-Phoenix/nixos-config
+git clone https://github.com/tobifroe/nixos-config
 cd nixos-config
 ```
 #### 3. **Install script**
@@ -346,8 +345,8 @@ Even though I use home manager, there is still a little bit of manual configurat
 ```nix
 programs.git = {
    ...
-   userName = "Frost-Phoenix";
-   userEmail = "67cyril6767@gmail.com";
+   userName = "tobifroe";
+   userEmail = "your_email@example.com";
    ...
 };
 ```
