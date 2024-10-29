@@ -14,6 +14,7 @@
     file                              # Show file information 
     gtt                               # google translate TUI
     gifsicle                          # gif utility
+    go
     gtrash                            # rm replacement, put deleted files in system trash
     hexdump
     imv                               # image viewer
@@ -66,6 +67,7 @@
     nix-prefetch-github
     obsidian
     pavucontrol                       # pulseaudio volume controle (GUI)
+    prusa-slicer
     qalculate-gtk                     # calculator
     reaper
     signal-desktop

@@ -235,10 +235,6 @@
         ",XF86MonBrightnessDown, exec, brightnessctl set 5%-"
         "$mainMod, XF86MonBrightnessUp, exec, brightnessctl set 100%+"
         "$mainMod, XF86MonBrightnessDown, exec, brightnessctl set 100%-"
-
-        # display handling docked/clamshell
-        ",switch:on:Lid Switch, exec, hyprctl keyword monitor eDP-1,disable"
-        ",switch:off:Lid Switch, exec, hyprctl keyword monitor eDP-1"
       ];
 
       # binds that repeat when held
