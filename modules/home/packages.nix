@@ -3,6 +3,7 @@
   home.packages = (with pkgs; [
 
     ## CLI utility
+    air
     ani-cli
     bitwise                           # cli tool for bit / hex manipulation
     caligula                          # User-friendly, lightweight TUI for disk imaging
@@ -12,6 +13,7 @@
     fd                                # find replacement
     ffmpeg
     file                              # Show file information 
+    glib
     gtt                               # google translate TUI
     gifsicle                          # gif utility
     go
@@ -28,6 +30,7 @@
     ncdu                              # disk space
     nextcloud-client
     nitch                             # systhem fetch util
+    nodejs_22
     openssl
     onefetch                          # fetch utility for git repo
     pamixer                           # pulseaudio command line mixer
@@ -37,13 +40,9 @@
     pipewire.jack
     qview                             # minimal image viewer
     ripgrep                           # grep replacement
-    tdf                               # cli pdf viewer
+    opentofu
     tldr
-    todo                              # cli todo list
-    toipe                             # typing test in the terminal
-    ttyper                            # cli typing test
     unzip
-    valgrind                          # c memory analyzer
     wl-clipboard                      # clipboard utils for wayland (wl-copy, wl-paste)
     wget
     yazi                              # terminal file manager
@@ -59,9 +58,7 @@
     tty-clock                         # cli clock
 
     ## GUI Apps
-    audacity
     calibre
-    gimp
     keepassxc
     libreoffice
     nix-prefetch-github
@@ -71,11 +68,8 @@
     qalculate-gtk                     # calculator
     reaper
     signal-desktop
-    soundwireserver                   # pass audio to android phone
     veracrypt
     vlc
-    winetricks
-    wineWowPackages.wayland
 
     # C / C++
     gcc
