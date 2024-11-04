@@ -32,6 +32,8 @@ in
       ms-vscode.cpptools
       # OCaml
       ocamllabs.ocaml-platform
+      #
+      golang.go
 
       # Color theme
       jdinhlife.gruvbox
