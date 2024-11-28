@@ -30,6 +30,7 @@
     ncdu                              # disk space
     nextcloud-client
     nitch                             # systhem fetch util
+    nixpkgs-review
     nodejs_22
     openssl
     onefetch                          # fetch utility for git repo
@@ -59,6 +60,7 @@
 
     ## GUI Apps
     calibre
+    chromium
     keepassxc
     libreoffice
     nix-prefetch-github

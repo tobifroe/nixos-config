@@ -6,6 +6,7 @@
     ./discord/discord.nix                     # discord with catppuccin theme
     ./fastfetch.nix                         # fetch tool
     ./firefox.nix		      # firefox browser
+    ./foot.nix                        # foot terminal
     ./fzf.nix                         # fuzzy finder
     ./git.nix                         # version control
     ./gnome.nix                         # gnome apps

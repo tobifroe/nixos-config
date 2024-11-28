@@ -32,8 +32,10 @@ in
       ms-vscode.cpptools
       # OCaml
       ocamllabs.ocaml-platform
-      #
+      # Golang
       golang.go
+      # Rust
+      rust-lang.rust-analyzer
 
       # Color theme
       jdinhlife.gruvbox
