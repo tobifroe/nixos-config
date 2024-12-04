@@ -18,6 +18,7 @@
     ./nvim.nix                        # neovim editor
     ./packages.nix                    # other packages
     ./rofi.nix                        # launcher
+    ./rover.nix
     ./scripts/scripts.nix             # personal scripts
     ./spicetify.nix                   # spotify client
     ./starship.nix                    # shell prompt
