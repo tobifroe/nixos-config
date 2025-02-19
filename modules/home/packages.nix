@@ -42,6 +42,7 @@
     qview # minimal image viewer
     ripgrep # grep replacement
     opentofu
+    testdisk
     tldr
     unzip
     wl-clipboard # clipboard utils for wayland (wl-copy, wl-paste)
@@ -62,7 +63,9 @@
     calibre
     chromium
     keepassxc
+    ledger-live-desktop
     libreoffice
+    monero-gui
     nix-prefetch-github
     obsidian
     pavucontrol # pulseaudio volume controle (GUI)

@@ -27,7 +27,7 @@
 | **Notification Daemon**     | [swaync][swaync] |
 | **Terminal Emulator**       | [Kitty][Kitty] |
 | **Shell**                   | [zsh][zsh] + [oh-my-zsh][oh-my-zsh] + [Starship][Starship] |
-| **Text Editor**             | [VSCodium][VSCodium] + [Neovim][Neovim] |
+| **Text Editor**             | [Neovim][Neovim] |
 | **network management tool** | [NetworkManager][NetworkManager] + [network-manager-applet][network-manager-applet] |
 | **System resource monitor** | [Btop][Btop] |
 | **File Manager**            | [nautilus][nautilus] + [yazi][yazi] |
@@ -404,7 +404,6 @@ This is based on [Frost-Phoenix nixos-config](https://github.com/Frost-Phoenix/n
 [Hyprlock]: https://github.com/hyprwm/hyprlock
 [audacious]: https://audacious-media-player.org/
 [mpv]: https://github.com/mpv-player/mpv
-[VSCodium]:https://vscodium.com/
 [Neovim]: https://github.com/neovim/neovim
 [grimblast]: https://github.com/hyprwm/contrib
 [qview]: https://interversehq.com/qview/
