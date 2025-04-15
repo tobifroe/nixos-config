@@ -16,9 +16,12 @@
       size = 12;
     };
     theme = {
-      name = "Gruvbox-Dark";
-      package = pkgs.gruvbox-gtk-theme.override {
-        colorVariants = [ "dark" ];
+      name = "catppuccin-macchiato-mauve-compact+default";
+      package = pkgs.catppuccin-gtk.override
+      {
+        accents = [ "mauve" ];
+        variant = "macchiato";
+        size = "compact";
       };
     };
     iconTheme = {

@@ -1,5 +1,5 @@
 {
-  description = "tobifroes nixos configuration";
+  description = "tobifs nixos configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";

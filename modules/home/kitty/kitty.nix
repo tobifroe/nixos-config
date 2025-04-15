@@ -3,7 +3,7 @@
   programs.kitty = {
     enable = true;
 
-    themeFile = "gruvbox-dark-hard";
+    themeFile = "Catppuccin-Macchiato";
     
     font = {
       name = "FiraCode Nerd Font";
