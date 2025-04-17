@@ -9,6 +9,8 @@
     hyprpicker.url = "github:hyprwm/hyprpicker";
   
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
+
+    catppuccin.url = "github:catppuccin/nix";
   
     hyprland = {
       type = "git";
@@ -41,7 +43,9 @@
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = [ ./hosts/laptop ];
+        modules = [ 
+            ./hosts/laptop 
+          ];
         specialArgs = { host="laptop"; inherit self inputs username ; };
       };
     };

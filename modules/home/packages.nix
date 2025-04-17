@@ -69,7 +69,7 @@
     prusa-slicer
     qalculate-gtk # calculator
     reaper
-    signal-desktop
+    signal-desktop-bin
     veracrypt
     vlc
 

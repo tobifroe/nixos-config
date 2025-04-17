@@ -1,5 +1,6 @@
 { inputs, username, host, ... }: {
   imports = [
+    inputs.catppuccin.homeManagerModules.catppuccin
     ./audacious.nix # music player
     ./bat.nix # better cat command
     ./btop.nix # resouces monitor 
@@ -14,7 +15,6 @@
     ./hyprland # window manager
     ./kitty/kitty.nix # terminal
     ./swaync/swaync.nix # notification deamon
-    ./micro.nix # nano replacement
     ./nvim.nix # neovim editor
     ./packages.nix # other packages
     ./rofi.nix # launcher

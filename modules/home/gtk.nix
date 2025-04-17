@@ -9,20 +9,17 @@
     noto-fonts-emoji
   ];
 
+  catppuccin.enable = true;
+  catppuccin.flavor = "macchiato";
+  catppuccin.gtk.enable = true;
+  catppuccin.starship.enable = true;
+  catppuccin.nvim.enable = false;
+
   gtk = {
     enable = true;
     font = {
       name = "FiraCode Nerd Font";
       size = 12;
-    };
-    theme = {
-      name = "Catppuccin-Macchiato-Compact-Mauve-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "mauve" ];
-        size = "compact";
-        tweaks = [ "rimless" "black" ];
-        variant = "macchiato";
-      };
     };
     iconTheme = {
       name = "Papirus-Dark";
