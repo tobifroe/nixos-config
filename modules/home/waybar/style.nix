@@ -48,7 +48,7 @@ in
       padding-left: 15px;
     }
     #workspaces button {
-      color: ${yellow};
+      color: ${magenta};
       padding-left:  5px;
       padding-right: 5px;
       margin-right: 10px;
@@ -58,8 +58,8 @@ in
       color: ${text_color};
     }
     #workspaces button.active {
-      color: ${yellow};
-      border-bottom: ${indicator_height} solid ${yellow};
+      color: ${magenta};
+      border-bottom: ${indicator_height} solid ${magenta};
     }
 
     #clock {

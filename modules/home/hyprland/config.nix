@@ -11,7 +11,7 @@
         "nm-applet &"
         "wl-clip-persist --clipboard both"
         # "swaybg -m fill -i $(find ~/Pictures/wallpapers/ -maxdepth 2 -type f) &"
-        "swaybg -m fill -i /home/tobif/Pictures/wallpapers/others/astronaut.jpg &"
+        "swaybg -m fill -i /home/tobif/Pictures/wallpapers/others/black5_unicat.png &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "poweralertd &"
         "waybar &"
@@ -24,6 +24,7 @@
         "[workspace 2 silent] kitty"
         "[workspace 3 silent] keepassxc"
         "[workspace 4 silent] nautilus"
+        "[workspace 5 silent] spotify"
       ];
 
       input = {
@@ -47,7 +48,6 @@
         border_size = 2;
         "col.active_border" = "rgb(ee99a0) rgb(f5bde6) 45deg";
         "col.inactive_border" = "0x00000000";
-        border_part_of_window = false;
         no_border_on_floating = false;
       };
 
@@ -239,35 +239,6 @@
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
       ];
-
-      # windowrule
-      windowrule = [
-        "float,qView"
-        "center,qView"
-        "size 1200 725,qView"
-        "float,imv"
-        "center,imv"
-        "size 1200 725,imv"
-        "float,mpv"
-        "center,mpv"
-        "tile,Aseprite"
-        "size 1200 725,mpv"
-        "float,title:^(float_kitty)$"
-        "center,title:^(float_kitty)$"
-        "size 950 600,title:^(float_kitty)$"
-        "float,audacious"
-        "pin,rofi"
-        "tile, neovide"
-        "idleinhibit focus,mpv"
-        "float,udiskie"
-        "float,title:^(Transmission)$"
-        "float,title:^(Volume Control)$"
-        "float,title:^(Firefox — Sharing Indicator)$"
-        "move 0 0,title:^(Firefox — Sharing Indicator)$"
-        "size 700 450,title:^(Volume Control)$"
-        "move 40 55%,title:^(Volume Control)$"
-      ];
-
       # windowrulev2
       windowrulev2 = [
         "float, title:^(Picture-in-Picture)$"

@@ -59,7 +59,6 @@
     tty-clock # cli clock
 
     ## GUI Apps
-    chromium
     element-desktop
     keepassxc
     ledger-live-desktop
