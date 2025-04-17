@@ -5,6 +5,7 @@
     ## CLI utility
     air
     ani-cli
+    bind
     bitwise # cli tool for bit / hex manipulation
     caligula # User-friendly, lightweight TUI for disk imaging
     cliphist # clipboard manager
@@ -14,8 +15,6 @@
     ffmpeg
     file # Show file information 
     glib
-    gtt # google translate TUI
-    gifsicle # gif utility
     go
     gtrash # rm replacement, put deleted files in system trash
     hexdump
@@ -60,12 +59,11 @@
     tty-clock # cli clock
 
     ## GUI Apps
-    calibre
     chromium
+    element-desktop
     keepassxc
     ledger-live-desktop
     libreoffice
-    monero-gui
     nix-prefetch-github
     obsidian
     pavucontrol # pulseaudio volume controle (GUI)
