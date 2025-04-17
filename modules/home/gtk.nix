@@ -16,12 +16,12 @@
       size = 12;
     };
     theme = {
-      name = "catppuccin-macchiato-mauve-compact+default";
-      package = pkgs.catppuccin-gtk.override
-      {
+      name = "Catppuccin-Macchiato-Compact-Mauve-Dark";
+      package = pkgs.catppuccin-gtk.override {
         accents = [ "mauve" ];
-        variant = "macchiato";
         size = "compact";
+        tweaks = [ "rimless" "black" ];
+        variant = "macchiato";
       };
     };
     iconTheme = {
