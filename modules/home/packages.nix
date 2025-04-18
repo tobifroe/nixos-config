@@ -41,6 +41,7 @@
     qview # minimal image viewer
     ripgrep # grep replacement
     opentofu
+    socat
     testdisk
     tldr
     unzip

@@ -14,6 +14,7 @@
   catppuccin.gtk.enable = true;
   catppuccin.starship.enable = true;
   catppuccin.nvim.enable = false;
+  catppuccin.swaync.enable = true;
 
   gtk = {
     enable = true;

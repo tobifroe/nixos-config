@@ -18,6 +18,7 @@
         "swaync &"
         "wl-paste --watch cliphist store &"
         "hyprlock"
+        "docking"
 
         ## App auto start
         "[workspace 1 silent] firefox"

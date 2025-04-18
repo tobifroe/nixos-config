@@ -28,8 +28,7 @@
   rofi-power-menu = pkgs.writeScriptBin "rofi-power-menu" (builtins.readFile ./scripts/rofi-power-menu.sh);
   power-menu = pkgs.writeScriptBin "power-menu" (builtins.readFile ./scripts/power-menu.sh);
 
-  dock = pkgs.writeScriptBin "dock" (builtins.readFile ./scripts/dock.sh);
-  undock = pkgs.writeScriptBin "undock" (builtins.readFile ./scripts/undock.sh);
+  docking = pkgs.writeScriptBin "docking" (builtins.readFile ./scripts/docking.sh);
 in {
   home.packages = with pkgs; [
     wall-change
@@ -61,7 +60,7 @@ in {
     rofi-power-menu
     power-menu
 
-    dock
-    undock
+    docking
+
   ];
 }
