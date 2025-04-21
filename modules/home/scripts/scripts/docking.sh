@@ -9,7 +9,7 @@ dock () {
 }
 
 undock() {
-  hyprctl keyword monitor eDP-1
+  hyprctl keyword monitor eDP-1,enable
   pkill waybar
   hyprctl dispatch exec waybar
   pkill swaync
@@ -18,7 +18,7 @@ undock() {
 
 handle() {
   case $1 in
-    monitoradded*) dock ;;
+    monitoradded*) undock ;;
   esac
 }
 

@@ -22,7 +22,7 @@
 
         ## App auto start
         "[workspace 1 silent] firefox"
-        "[workspace 2 silent] kitty"
+        "[workspace 2 silent] wezterm"
         "[workspace 3 silent] keepassxc"
         "[workspace 4 silent] nautilus"
         "[workspace 5 silent] spotify"
@@ -132,10 +132,8 @@
         "$mainMod, F1, exec, show-keybinds"
 
         # keybindings
-        "$mainMod, Return, exec, kitty"
-        "ALT, Return, exec, kitty --title float_kitty"
-        "$mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'"
-        "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] floorp'"
+        "$mainMod, Return, exec, wezterm"
+        "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] firefox'"
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen, 0"
         "$mainMod SHIFT, F, fullscreen, 1"

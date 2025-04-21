@@ -5,6 +5,7 @@
     ## CLI utility
     air
     ani-cli
+    ansible
     bind
     bitwise # cli tool for bit / hex manipulation
     caligula # User-friendly, lightweight TUI for disk imaging
@@ -14,11 +15,14 @@
     fd # find replacement
     ffmpeg
     file # Show file information 
+    fluxcd
     glib
     go
     gtrash # rm replacement, put deleted files in system trash
+    kubernetes-helm
     hexdump
     imv # image viewer
+    k9s
     killall
     kubectl
     lazygit
@@ -40,6 +44,7 @@
     pipewire.jack
     qview # minimal image viewer
     ripgrep # grep replacement
+    rust-analyzer
     opentofu
     socat
     testdisk
@@ -73,6 +78,7 @@
     signal-desktop-bin
     veracrypt
     vlc
+    wezterm
 
     # C / C++
     gcc
