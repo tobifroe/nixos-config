@@ -77,6 +77,7 @@
     reaper
     signal-desktop-bin
     veracrypt
+    vial
     vlc
     wezterm
 
