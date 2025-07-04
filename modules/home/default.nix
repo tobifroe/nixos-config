@@ -19,7 +19,6 @@
     ./packages.nix # other packages
     ./rofi.nix # launcher
     ./scripts/scripts.nix # personal scripts
-    ./spicetify.nix # spotify client
     ./starship.nix # shell prompt
     ./swaylock.nix # lock screen
     ./waybar # status bar

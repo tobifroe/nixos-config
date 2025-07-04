@@ -49,6 +49,7 @@
     socat
     testdisk
     tldr
+    timewarrior
     unzip
     wl-clipboard # clipboard utils for wayland (wl-copy, wl-paste)
     wget
@@ -76,6 +77,7 @@
     qalculate-gtk # calculator
     reaper
     signal-desktop-bin
+    tidal-hifi
     veracrypt
     vial
     vlc
