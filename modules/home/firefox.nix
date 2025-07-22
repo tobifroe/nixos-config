@@ -16,6 +16,7 @@
       enable = true;
       languagePacks = [ "de" "en-US" ];
 
+      profiles.default.extensions.force = true;
       /* ---- POLICIES ---- */
       # Check about:policies#documentation for options.
       policies = {
