@@ -1,422 +1,141 @@
 <h1 align="center">
-   <img src="./.github/assets/logo/nixos-logo.png  " width="100px" /> 
+   <img src="./.github/assets/logo/nixos-logo.png" width="100px" /> 
    <br>
-      NixOS Config
+      NixOS Laptop Config
    <br>
 </h1>
 
 # 🗃️ Overview
 
+This repository contains a modular, flake-based NixOS configuration focused on a **Wayland/Hyprland** laptop environment, managed with [Home-Manager](https://github.com/nix-community/home-manager). It includes a curated set of packages, custom scripts, and a modern, themed desktop experience.
+
+---
+
 ## 📚 Layout
 
-- [flake.nix](flake.nix) base of the configuration
-- [hosts](hosts) 🌳 per-host configurations that contain machine specific configurations
-  - [desktop](hosts/desktop/) 🖥️ Desktop specific configuration
-  - [laptop](hosts/laptop/) 💻 Laptop specific configuration
-  - [vm](hosts/vm/) 🗄️ VM specific configuration
-- [modules](modules) 🍱 modularized NixOS configurations
-  - [core](modules/core/) ⚙️ Core NixOS configuration
-  - [homes](modules/home/) 🏠 my [Home-Manager](https://github.com/nix-community/home-manager) config
-- [pkgs](flake/pkgs) 📦 Packages Build from source
-- [wallpapers](wallpapers/) 🌄 wallpapers collection
-
-## 📓 Components
-
-|                             |                                  NixOS + Hyprland                                   |
-| --------------------------- | :---------------------------------------------------------------------------------: |
-| **Window Manager**          |                                [Hyprland][Hyprland]                                 |
-| **Bar**                     |                                  [Waybar][Waybar]                                   |
-| **Application Launcher**    |                                    [rofi][rofi]                                     |
-| **Notification Daemon**     |                                  [swaync][swaync]                                   |
-| **Terminal Emulator**       |                                   [Kitty][Kitty]                                    |
-| **Shell**                   |             [zsh][zsh] + [oh-my-zsh][oh-my-zsh] + [Starship][Starship]              |
-| **Text Editor**             |                                  [Neovim][Neovim]                                   |
-| **network management tool** | [NetworkManager][NetworkManager] + [network-manager-applet][network-manager-applet] |
-| **System resource monitor** |                                    [Btop][Btop]                                     |
-| **File Manager**            |                         [nautilus][nautilus] + [yazi][yazi]                         |
-| **Fonts**                   |      [FiraCode Nerd Font][Nerd fonts] + [JetBrainsMono Nerd Font][Nerd fonts]       |
-| **Color Scheme**            |                            [Gruvbox Dark Hard][Gruvbox]                             |
-| **Cursor**                  |                       [Bibata-Modern-Ice][Bibata-Modern-Ice]                        |
-| **Icons**                   |                            [Papirus-Dark][Papirus-Dark]                             |
-| **Lockscreen**              |             [Hyprlock][Hyprlock] + [Swaylock-effects][Swaylock-effects]             |
-| **Image Viewer**            |                                   [qview][qview]                                    |
-| **Media Player**            |                                     [mpv][mpv]                                      |
-| **Music Player**            |                               [audacious][audacious]                                |
-| **Screenshot Software**     |                               [grimblast][grimblast]                                |
-| **Screen Recording**        |                             [wf-recorder][wf-recorder]                              |
-| **Clipboard**               |                         [wl-clip-persist][wl-clip-persist]                          |
-| **Color Picker**            |                              [hyprpicker][hyprpicker]                               |
-
-## 📝 Shell aliases
-
-<details>
-<summary>
-Utils (EXPAND)
-</summary>
-
-- `c` $\rightarrow$ `clear`
-- `cd` $\rightarrow$ `z`
-- `tt` $\rightarrow$ `gtrash put`
-- `vim` $\rightarrow$ `nvim`
-- `cat` $\rightarrow$ `bat`
-- `nano` $\rightarrow$ `micro`
-- `code` $\rightarrow$ `codium`
-- `py` $\rightarrow$ `python`
-- `icat` $\rightarrow$ `kitten icat`
-- `dsize` $\rightarrow$ `du -hs`
-- `pdf` $\rightarrow$ `tdf`
-- `open` $\rightarrow$ `xdg-open`
-- `space` $\rightarrow$ `ncdu`
-- `man` $\rightarrow$ `BAT_THEME='default' batman`
-- `l` $\rightarrow$ `eza --icons  -a --group-directories-first -1`
-- `ll` $\rightarrow$ `eza --icons  -a --group-directories-first -1 --no-user --long`
-- `tree` $\rightarrow$ `eza --icons --tree --group-directories-first`
-</details>
-
-<details>
-<summary>
-Nixos (EXPAND)
-</summary>
-
-- `cdnix` $\rightarrow$ `cd ~/nixos-config && codium ~/nixos-config`
-- `ns` $\rightarrow$ `nom-shell --run zsh`
-- `nix-test` $\rightarrow$ `nh os test`
-- `nix-switch` $\rightarrow$ `nh os switch`
-- `nix-update` $\rightarrow$ `nh os switch --update`
-- `nix-clean` $\rightarrow$ `nh clean all --keep 5`
-- `nix-search` $\rightarrow$ `nh search`
-</details>
-
-<details>
-<summary>
-Git (EXPAND)
-</summary>
-
-- `g` $\rightarrow$ `lazygit`
-- `gf` $\rightarrow$ `onefetch --number-of-file-churns 0 --no-color-palette`
-- `ga` $\rightarrow$ `git add`
-- `gaa` $\rightarrow$ `git add --all`
-- `gs` $\rightarrow$ `git status`
-- `gb` $\rightarrow$ `git branch`
-- `gm` $\rightarrow$ `git merge`
-- `gd` $\rightarrow$ `git diff`
-- `gpl` $\rightarrow$ `git pull`
-- `gplo` $\rightarrow$ `git pull origin`
-- `gps` $\rightarrow$ `git push`
-- `gpso` $\rightarrow$ `git push origin`
-- `gpst` $\rightarrow$ `git push --follow-tags`
-- `gcl` $\rightarrow$ `git clone`
-- `gc` $\rightarrow$ `git commit`
-- `gcm` $\rightarrow$ `git commit -m`
-- `gcma` $\rightarrow$ `git add --all && git commit -m`
-- `gtag` $\rightarrow$ `git tag -ma`
-- `gch` $\rightarrow$ `git checkout`
-- `gchb` $\rightarrow$ `git checkout -b`
-- `glog` $\rightarrow$ `git log --oneline --decorate --graph`
-- `glol` $\rightarrow$ `git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'`
-- `glola` $\rightarrow$ `git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --all`
-- `glols` $\rightarrow$ `git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --stat`
-
-</details>
-
-## 🛠️ Scripts
-
-All the scripts are in `modules/home/scripts/scripts/` and are exported as packages in `modules/home/scripts/default.nix`
-
-<details>
-<summary>
-extract.sh 
-</summary>
-
-**Description:** This script extract `tar.gz` archives in the current directory.
-
-**Usage:** `extract <archive_file>`
-
-</details>
-
-<details>
-<summary>
-compress.sh 
-</summary>
-
-**Description:** This script compress a file or a folder into a `tar.gz` archives which is created in the current directory with the name of the chosen file or folder.
-
-**Usage:** `compress <file>` or `compress <folder>`
-
-</details>
-
-<details>
-<summary>
-toggle_blur.sh 
-</summary>
-
-**Description:** This script toggles the Hyprland blur effect. If the blur is currently enabled, it will be disabled, and if it's disabled, it will be turned on.
-
-**Usage:** `toggle_blur`
-
-</details>
-
-<details>
-<summary>
-toggle_oppacity.sh 
-</summary>
-
-**Description:** This script toggles the Hyperland oppacity effect. If the oppacity is currently set to 0.90, it will be set to 1, and if it's set to 1, it will be set to 0.90.
-
-**Usage:** `toggle_oppacity`
-
-</details>
-
-<details>
-<summary>
-maxfetch.sh 
-</summary>
-
-**Description:** This script is a modified version of the [jobcmax/maxfetch][maxfetch] script.
-
-**Usage:** `maxfetch`
-
-</details>
-
-<details>
-<summary>
-music.sh 
-</summary>
-
-**Description:** This script is for managing Audacious (music player). If Audacious is currently running, it will be killed (stopping the music); otherwise, it will start Audacious in the 8th workspace and resume the music.
-
-**Usage:** `music`
-
-</details>
-
-<details>
-<summary>
-runbg.sh 
-</summary>
-
-**Description:** This script runs a provided command along with its arguments and detaches it from the terminal. Handy for launching apps from the command line without blocking it.
-
-**Usage:** `runbg <command> <arg1> <arg2> <...>`
-
-</details>
-
-## ⌨️ Keybinds
-
-View all keybinds by pressing `$mainMod F1` and wallpaper picker by pressing `$mainMod w`. By default `$mainMod` is the `SUPER` key.
-
-<details>
-<summary>
-Keybindings 
-</summary>
-
-##### show keybinds list
-
-- `$mainMod, F1, exec, show-keybinds`
-
-##### keybindings
-
-- `$mainMod, Return, exec, wezterm`
-- `ALT, Return, exec, kitty --title float_kitty`
-- `$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] firefox'`
-- `$mainMod, Q, killactive,`
-- `$mainMod, F, fullscreen, 0`
-- `$mainMod SHIFT, F, fullscreen, 1`
-- `$mainMod, Space, togglefloating,`
-- `$mainMod, D, exec, rofi -show drun`
-- `$mainMod SHIFT, D, exec, hyprctl dispatch exec '[workspace 4 silent] discord --enable-features=UseOzonePlatform --ozone-platform=wayland'`
-- `$mainMod SHIFT, S, exec, hyprctl dispatch exec '[workspace 5 silent] SoundWireServer'`
-- `$mainMod, Escape, exec, swaylock`
-- `ALT, Escape, exec, hyprlock`
-- `$mainMod SHIFT, Escape, exec, power-menu`
-- `$mainMod, J, togglesplit,`
-- `$mainMod, T, exec, toggle_oppacity`
-- `$mainMod, E, exec, nautilus`
-- `$mainMod SHIFT, B, exec, toggle_waybar`
-- `$mainMod, C ,exec, hyprpicker -a`
-- `$mainMod, W,exec, wallpaper-picker`
-- `$mainMod, N, exec, swaync-client -t -sw`
-- `$mainMod SHIFT, W, exec, vm-start`
-
-##### screenshot
-
-- `$mainMod, p, exec, grimblast --notify --cursor --freeze save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png`
-- `,Print, exec, grimblast --notify --cursor --freeze copy area`
-
-##### switch focus
-
-- `$mainMod, left, movefocus, l`
-- `$mainMod, right, movefocus, r`
-- `$mainMod, up, movefocus, u`
-- `$mainMod, down, movefocus, d`
-
-##### switch workspace
-
-- `$mainMod, 1, workspace, 1`
-- `$mainMod, 2, workspace, 2`
-- `$mainMod, 3, workspace, 3`
-- `$mainMod, 4, workspace, 4`
-- `$mainMod, 5, workspace, 5`
-- `$mainMod, 6, workspace, 6`
-- `$mainMod, 7, workspace, 7`
-- `$mainMod, 8, workspace, 8`
-- `$mainMod, 9, workspace, 9`
-- `$mainMod, 0, workspace, 10`
-
-##### same as above, but switch to the workspace
-
-- `$mainMod SHIFT, 1, movetoworkspacesilent, 1" # movetoworkspacesilent`
-- `$mainMod SHIFT, 2, movetoworkspacesilent, 2"`
-- `$mainMod SHIFT, 3, movetoworkspacesilent, 3"`
-- `$mainMod SHIFT, 4, movetoworkspacesilent, 4"`
-- `$mainMod SHIFT, 5, movetoworkspacesilent, 5"`
-- `$mainMod SHIFT, 6, movetoworkspacesilent, 6"`
-- `$mainMod SHIFT, 7, movetoworkspacesilent, 7"`
-- `$mainMod SHIFT, 8, movetoworkspacesilent, 8"`
-- `$mainMod SHIFT, 9, movetoworkspacesilent, 9"`
-- `$mainMod SHIFT, 0, movetoworkspacesilent, 10"`
-- `$mainMod CTRL, c, movetoworkspace, empty"`
-
-##### window control
-
-- `$mainMod SHIFT, left, movewindow, l`
-- `$mainMod SHIFT, right, movewindow, r`
-- `$mainMod SHIFT, up, movewindow, u`
-- `$mainMod SHIFT, down, movewindow, d`
-- `$mainMod CTRL, left, resizeactive, -80 0`
-- `$mainMod CTRL, right, resizeactive, 80 0`
-- `$mainMod CTRL, up, resizeactive, 0 -80`
-- `$mainMod CTRL, down, resizeactive, 0 80`
-- `$mainMod ALT, left, moveactive,  -80 0`
-- `$mainMod ALT, right, moveactive, 80 0`
-- `$mainMod ALT, up, moveactive, 0 -80`
-- `$mainMod ALT, down, moveactive, 0 80`
-
-##### media and volume controls
-
-- `,XF86AudioRaiseVolume,exec, pamixer -i 2`
-- `,XF86AudioLowerVolume,exec, pamixer -d 2`
-- `,XF86AudioMute,exec, pamixer -t`
-- `,XF86AudioPlay,exec, playerctl play-pause`
-- `,XF86AudioNext,exec, playerctl next`
-- `,XF86AudioPrev,exec, playerctl previous`
-- `,XF86AudioStop, exec, playerctl stop`
-- `$mainMod, mouse_down, workspace, e-1`
-- `$mainMod, mouse_up, workspace, e+1`
-
-##### laptop brigthness
-
-- `,XF86MonBrightnessUp, exec, brightnessctl set 5%+`
-- `,XF86MonBrightnessDown, exec, brightnessctl set 5%-`
-- `$mainMod, XF86MonBrightnessUp, exec, brightnessctl set 100%+`
-- `$mainMod, XF86MonBrightnessDown, exec, brightnessctl set 100%-`
-
-##### clipboard manager
-
-- `$mainMod, V, exec, cliphist list | rofi -dmenu -theme-str 'window {width: 50%;}' | cliphist decode | wl-copy`
-</details>
-
-# 🚀 Installation
-
-> [!CAUTION]
-> Applying custom configurations, especially those related to your operating system, can have unexpected consequences and may interfere with your system's normal behavior. While I have tested these configurations on my own setup, there is no guarantee that they will work flawlessly for you.
-> **I am not responsible for any issues that may arise from using this configuration.**
-
-> [!NOTE]
-> It is highly recommended to review the configuration contents and make necessary modifications to customize it to your needs before attempting the installation.
-
-#### 1. **Install NixOs**
-
-First install nixos using any [graphical ISO image](https://nixos.org/download.html#nixos-iso).
-
-> [!NOTE]
-> Only been tested using the Gnome graphical installer and choosing the `No desktop` option durring instalation.
-
-#### 2. **Clone the repo**
-
+- [`flake.nix`](flake.nix): Flake entrypoint and input management
+- [`hosts/laptop`](hosts/laptop): Laptop-specific system configuration
+- [`modules/core`](modules/core): Core NixOS modules (hardware, bootloader, network, security, virtualization, etc.)
+- [`modules/home`](modules/home): Home-Manager modules (apps, shell, scripts, theming, etc.)
+- [`pkgs`](pkgs): Custom package definitions (e.g., fonts)
+- [`wallpapers`](wallpapers): Wallpaper collection
+
+---
+
+## 🖥️ Main Features
+
+- **Wayland/Hyprland** window manager (with XWayland for compatibility)
+- **Waybar** status bar
+- **Rofi** application launcher
+- **SwayNC** notification daemon
+- **Kitty** and **WezTerm** terminal emulators
+- **Zsh** shell with [Starship](https://starship.rs/) prompt
+- **Neovim** as the main text editor
+- **NetworkManager** for networking
+- **Btop** for system monitoring
+- **Nautilus** and **Yazi** for file management
+- **Catppuccin** theming (GTK, Waybar, etc.)
+- **MonoLisa** and **Nerd Fonts** for coding and UI
+- **Bibata-Modern-Ice** cursor, **Papirus-Dark** icons
+- **Swaylock** and **Hyprlock** for lockscreen
+- **qView** for images, **mpv** for video, **audacious** for music
+- **Grimblast** for screenshots, **wf-recorder** for screen recording
+- **wl-clip-persist** for clipboard, **hyprpicker** for color picking
+- **Extensive CLI/GUI package set** (see [`modules/home/packages.nix`](modules/home/packages.nix))
+- **Custom scripts** for workflow automation (see below)
+
+---
+
+## 🛠️ Custom Scripts
+
+All scripts are in [`modules/home/scripts/scripts/`](modules/home/scripts/scripts/) and are exported as packages in [`modules/home/scripts/scripts.nix`](modules/home/scripts/scripts.nix).
+
+Some highlights:
+- `extract`: Extract `tar.gz` archives
+- `compress`: Compress files/folders to `tar.gz`
+- `toggle_blur`: Toggle Hyprland blur effect
+- `toggle_oppacity`: Toggle Hyprland opacity
+- `maxfetch`: Custom system fetch
+- `music`: Manage Audacious player
+- `runbg`: Run commands detached from terminal
+- `wallpaper-picker`: Interactive wallpaper switcher
+- `power-menu`, `rofi-power-menu`: Power management menus
+- `vm-start`: Start a VM
+- ...and more!
+
+---
+
+## ⌨️ Keybinds & Shortcuts
+
+- View all keybinds: <kbd>SUPER</kbd> + <kbd>F1</kbd>
+- Wallpaper picker: <kbd>SUPER</kbd> + <kbd>W</kbd>
+- Main mod key: <kbd>SUPER</kbd>
+
+Keybinds are defined in the Hyprland config and include workspace switching, launching apps, screenshots, media controls, and more. See [`modules/home/hyprland/config.nix`](modules/home/hyprland/config.nix) for the full list.
+
+---
+
+## 📝 Shell Aliases
+
+A rich set of Zsh aliases is provided for:
+- Utilities (`cat` → `bat`, `cd` → `z`, etc.)
+- NixOS management (`nix-switch`, `nix-update`, etc.)
+- Git workflows (`g`, `gs`, `gc`, etc.)
+
+See [`modules/home/zsh.nix`](modules/home/zsh.nix) for the full list.
+
+---
+
+## 🚀 Installation
+
+> **Warning:**
+> This configuration is tailored for a single laptop host. Review and adapt as needed before use. Use at your own risk!
+
+### 1. Install NixOS
+Install NixOS using the [official ISO](https://nixos.org/download.html#nixos-iso). The config is tested with the Gnome graphical installer, "No desktop" option.
+
+### 2. Clone the Repo
 ```bash
 nix-shell -p git
 git clone https://github.com/tobifroe/nixos-config
 cd nixos-config
 ```
 
-#### 3. **Install script**
-
-> [!CAUTION]
-> For some computers, the default rebuild command might get stuck due to CPU cores running out of RAM. To fix that modify the install script line: `sudo nixos-rebuild switch --flake .#${HOST}` to `sudo nixos-rebuild switch --cores <less than your max number of cores> --flake .#${HOST}`
-
-> [!TIP]
-> As it is better to know what a script does before running it, you are advised to read it or at least see the [Install script walkthrough](#Install-script-walkthrough) section before execution.
-
-Execute and follow the installation script :
-
+### 3. Run the Install Script
 ```bash
 ./install.sh
 ```
+- Prompts for your username
+- Sets up the laptop host
+- Copies wallpapers
+- Copies your hardware config
+- Builds and applies the system
 
-#### 4. **Reboot**
+### 4. Reboot
+After reboot, the config should be active. Log in and enjoy your Hyprland desktop!
 
-After rebooting, the config should be applied, you'll be greeted by hyprlock prompting for your password.
+### 5. Manual Steps
+- Change your Git user info in [`modules/home/git.nix`](modules/home/git.nix)
+- (Optional) Enable Discord themes in Discord settings
+- (Optional) Configure browser extensions/settings as desired
 
-#### 5. **Manual config**
+---
 
-Even though I use home manager, there is still a little bit of manual configuration to do:
+## 🧩 Customization
+- Add or remove packages in [`modules/home/packages.nix`](modules/home/packages.nix)
+- Add scripts to [`modules/home/scripts/scripts/`](modules/home/scripts/scripts/)
+- Tweak theming in the relevant modules (GTK, Waybar, etc.)
+- Adjust Hyprland settings in [`modules/home/hyprland/config.nix`](modules/home/hyprland/config.nix)
 
-- Set Aseprite theme (they are in the folder `./nixos-config/modules/home/aseprite/themes`).
-- Enable Discord theme (in Discord settings under VENCORD > Themes).
-- Configure the browser (for now, all browser configuration is done manually).
-- Change the git account information in `./modules/home/git.nix`
+---
 
-```nix
-programs.git = {
-   ...
-   userName = "tobifroe";
-   userEmail = "your_email@example.com";
-   ...
-};
-```
+## 👥 Credits
 
-## Install script walkthrough
+Based on [Frost-Phoenix nixos-config](https://github.com/Frost-Phoenix/nixos-config) and many community resources.
 
-A brief walkthrough of what the install script does.
-
-#### 1. **Get username**
-
-You will receive a prompt to enter your username, with a confirmation check.
-
-#### 2. **Set username**
-
-The script will replace all occurancies of the default usename `CURRENT_USERNAME` by the given one stored in `$username`
-
-#### 3. Create basic directories
-
-The following directories will be created:
-
-- `~/Music`
-- `~/Documents`
-- `~/Pictures/wallpapers/others`
-
-#### 4. Copy the wallpapers
-
-Then the wallpapers will be copied into `~/Pictures/wallpapers/others` which is the folder in which the `wallpaper-picker.sh` script will be looking for them.
-
-#### 5. Get the hardware configuration
-
-It will also automatically copy the hardware configuration from `/etc/nixos/hardware-configuration.nix` to `./hosts/${host}/hardware-configuration.nix` so that the hardware configuration used is yours and not the default one.
-
-#### 6. Choose a host (desktop / laptop)
-
-Now you will need to choose the host you want. It depend on whether you are using a desktop or laptop (or a VM altho it can be realy buggy).
-
-#### 7. Build the system
-
-Lastly, it will build the system, which includes both the flake config and home-manager config.
-
-# 👥 Credits
-
-This is based on [Frost-Phoenix nixos-config](https://github.com/Frost-Phoenix/nixos-config).
+---
 
 <!-- Links -->
-
 [Hyprland]: https://github.com/hyprwm/Hyprland
 [Kitty]: https://github.com/kovidgoyal/kitty
 [Starship]: https://github.com/starship/starship
@@ -437,11 +156,9 @@ This is based on [Frost-Phoenix nixos-config](https://github.com/Frost-Phoenix/n
 [swaync]: https://github.com/ErikReider/SwayNotificationCenter
 [Nerd fonts]: https://github.com/ryanoasis/nerd-fonts
 [NetworkManager]: https://wiki.gnome.org/Projects/NetworkManager
-[network-manager-applet]: https://gitlab.gnome.org/GNOME/network-manager-applet/
 [wl-clip-persist]: https://github.com/Linus789/wl-clip-persist
 [wf-recorder]: https://github.com/ammen99/wf-recorder
 [hyprpicker]: https://github.com/hyprwm/hyprpicker
-[Gruvbox]: https://github.com/morhetz/gruvbox
+[Catppuccin]: https://github.com/catppuccin/catppuccin
 [Papirus-Dark]: https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
 [Bibata-Modern-Ice]: https://www.gnome-look.org/p/1197198
-[maxfetch]: https://github.com/jobcmax/maxfetch

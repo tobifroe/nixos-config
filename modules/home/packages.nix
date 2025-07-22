@@ -51,6 +51,7 @@
     tldr
     timewarrior
     unzip
+    uv
     wl-clipboard # clipboard utils for wayland (wl-copy, wl-paste)
     wget
     yazi # terminal file manager
@@ -66,6 +67,7 @@
     tty-clock # cli clock
 
     ## GUI Apps
+    code-cursor
     element-desktop
     keepassxc
     ledger-live-desktop
