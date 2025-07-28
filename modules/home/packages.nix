@@ -8,6 +8,7 @@
     ansible
     bind
     bitwise # cli tool for bit / hex manipulation
+    bottom
     caligula # User-friendly, lightweight TUI for disk imaging
     cliphist # clipboard manager
     eza # ls replacement
@@ -43,6 +44,8 @@
     programmer-calculator
     pipewire.jack
     qview # minimal image viewer
+    restic
+    rclone
     ripgrep # grep replacement
     rust-analyzer
     opentofu
