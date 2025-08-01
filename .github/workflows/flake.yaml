@@ -25,4 +25,4 @@ jobs:
           git config user.email '${{ github.actor }}@users.noreply.github.com'
           git commit -am "chore: flake update"
           git push -f origin main:flake-update
-          gh pr create --title "nix: flake update" --base main --head flake-updat --assignee obifroe --body ":tada:" || echo pr already exists
+          gh pr create --title "nix: flake update" --base main --head flake-updat --assignee obifroe --body ":tada:"
