@@ -26,3 +26,5 @@ jobs:
           git commit -am "chore: flake update"
           git push -f origin main:flake-update
           gh pr create --title "nix: flake update" --base main --head flake-updat --assignee obifroe --body ":tada:"
+        env:
+          GH_TOKEN: ${{ github.token }}
