@@ -1,0 +1,28 @@
+name: "update flakes"
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 11 * * 1"
+
+jobs:
+  flake:
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v31
+      - run: nix flake update
+      - name: "create pr"
+        run: |
+          git config user.name '${{ github.actor }}'
+          git config user.email '${{ github.actor }}@users.noreply.github.com'
+          git commit -am "chore: flake update"
+          git push -f origin main:flake-update
+          gh pr create --title "nix: flake update" --base main --head flake-updat --assignee obifroe --body ":tada:" || echo pr already exists
