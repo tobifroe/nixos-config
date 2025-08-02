@@ -25,6 +25,6 @@ jobs:
           git config user.email '${{ github.actor }}@users.noreply.github.com'
           git commit -am "chore: flake update"
           git push -f origin main:flake-update
-          gh pr create --title "nix: flake update" --base main --head flake-updat --assignee tobifroe --body ":tada:"
+          gh pr create --title "nix: flake update" --base main --head flake-update --assignee tobifroe --body ":tada:"
         env:
           GH_TOKEN: ${{ secrets.FLAKE_UPDATE_TOKEN }}
