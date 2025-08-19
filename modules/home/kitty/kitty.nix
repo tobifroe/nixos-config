@@ -3,8 +3,6 @@
   programs.kitty = {
     enable = true;
 
-    themeFile = "Catppuccin-Macchiato";
-    
     font = {
       name = "FiraCode Nerd Font";
       size = if (host == "laptop") then 14 else 16;

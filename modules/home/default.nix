@@ -1,10 +1,9 @@
 { inputs, username, host, ... }: {
   imports = [
-    inputs.catppuccin.homeManagerModules.catppuccin
     ./audacious.nix # music player
     ./bat.nix # better cat command
     ./btop.nix # resouces monitor 
-    ./discord/discord.nix # discord with catppuccin theme
+    ./discord/discord.nix # discord
     ./fastfetch.nix # fetch tool
     ./firefox.nix # firefox browser
     ./foot.nix # foot terminal

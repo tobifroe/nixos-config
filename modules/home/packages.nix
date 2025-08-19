@@ -25,6 +25,7 @@
     imv # image viewer
     k9s
     killall
+    klog-rs
     kubectl
     lazygit
     libnotify

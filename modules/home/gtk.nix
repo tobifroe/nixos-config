@@ -9,15 +9,6 @@
     noto-fonts-emoji
   ];
 
-  catppuccin.enable = true;
-  catppuccin.flavor = "macchiato";
-  catppuccin.gtk.enable = true;
-  catppuccin.starship.enable = true;
-  catppuccin.nvim.enable = false;
-  catppuccin.swaync.enable = true;
-  catppuccin.k9s.enable = true;
-  catppuccin.wezterm.enable = true;
-
   gtk = {
     enable = true;
     font = {

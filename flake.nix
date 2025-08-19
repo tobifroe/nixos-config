@@ -10,8 +10,6 @@
   
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
 
-    catppuccin.url = "github:catppuccin/nix";
-  
     hyprland = {
       type = "git";
       url = "https://github.com/hyprwm/Hyprland";
