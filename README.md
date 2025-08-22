@@ -17,7 +17,6 @@ This repository contains a modular, flake-based NixOS configuration focused on a
 - [`hosts/laptop`](hosts/laptop): Laptop-specific system configuration
 - [`modules/core`](modules/core): Core NixOS modules (hardware, bootloader, network, security, virtualization, etc.)
 - [`modules/home`](modules/home): Home-Manager modules (apps, shell, scripts, theming, etc.)
-- [`pkgs`](pkgs): Custom package definitions (e.g., fonts)
 - [`wallpapers`](wallpapers): Wallpaper collection
 
 ---
