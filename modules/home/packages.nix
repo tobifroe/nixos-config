@@ -11,6 +11,7 @@
     bottom
     caligula # User-friendly, lightweight TUI for disk imaging
     cliphist # clipboard manager
+    devenv
     eza # ls replacement
     entr # perform action when file change
     fd # find replacement
@@ -62,6 +63,7 @@
     yt-dlp-light
     xdg-utils
     xxd
+    zellij
 
     ## CLI 
     cbonsai # terminal screensaver
@@ -71,6 +73,7 @@
     tty-clock # cli clock
 
     ## GUI Apps
+    alacritty
     code-cursor
     element-desktop
     keepassxc
@@ -87,7 +90,6 @@
     veracrypt
     vial
     vlc
-    wezterm
 
     # C / C++
     gcc

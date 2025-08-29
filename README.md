@@ -27,7 +27,7 @@ This repository contains a modular, flake-based NixOS configuration focused on a
 - **Waybar** status bar
 - **Rofi** application launcher
 - **SwayNC** notification daemon
-- **Kitty** and **WezTerm** terminal emulators
+- **Alacritty** terminal
 - **Zsh** shell with [Starship](https://starship.rs/) prompt
 - **Neovim** as the main text editor
 - **NetworkManager** for networking
@@ -50,6 +50,7 @@ This repository contains a modular, flake-based NixOS configuration focused on a
 All scripts are in [`modules/home/scripts/scripts/`](modules/home/scripts/scripts/) and are exported as packages in [`modules/home/scripts/scripts.nix`](modules/home/scripts/scripts.nix).
 
 Some highlights:
+
 - `extract`: Extract `tar.gz` archives
 - `compress`: Compress files/folders to `tar.gz`
 - `toggle_blur`: Toggle Hyprland blur effect
@@ -77,6 +78,7 @@ Keybinds are defined in the Hyprland config and include workspace switching, lau
 ## 📝 Shell Aliases
 
 A rich set of Zsh aliases is provided for:
+
 - Utilities (`cat` → `bat`, `cd` → `z`, etc.)
 - NixOS management (`nix-switch`, `nix-update`, etc.)
 - Git workflows (`g`, `gs`, `gc`, etc.)
@@ -91,9 +93,11 @@ See [`modules/home/zsh.nix`](modules/home/zsh.nix) for the full list.
 > This configuration is tailored for a single laptop host. Review and adapt as needed before use. Use at your own risk!
 
 ### 1. Install NixOS
+
 Install NixOS using the [official ISO](https://nixos.org/download.html#nixos-iso). The config is tested with the Gnome graphical installer, "No desktop" option.
 
 ### 2. Clone the Repo
+
 ```bash
 nix-shell -p git
 git clone https://github.com/tobifroe/nixos-config
@@ -101,9 +105,11 @@ cd nixos-config
 ```
 
 ### 3. Run the Install Script
+
 ```bash
 ./install.sh
 ```
+
 - Prompts for your username
 - Sets up the laptop host
 - Copies wallpapers
@@ -111,9 +117,11 @@ cd nixos-config
 - Builds and applies the system
 
 ### 4. Reboot
+
 After reboot, the config should be active. Log in and enjoy your Hyprland desktop!
 
 ### 5. Manual Steps
+
 - Change your Git user info in [`modules/home/git.nix`](modules/home/git.nix)
 - (Optional) Enable Discord themes in Discord settings
 - (Optional) Configure browser extensions/settings as desired
@@ -121,6 +129,7 @@ After reboot, the config should be active. Log in and enjoy your Hyprland deskto
 ---
 
 ## 🧩 Customization
+
 - Add or remove packages in [`modules/home/packages.nix`](modules/home/packages.nix)
 - Add scripts to [`modules/home/scripts/scripts/`](modules/home/scripts/scripts/)
 - Tweak theming in the relevant modules (GTK, Waybar, etc.)
@@ -135,6 +144,7 @@ Based on [Frost-Phoenix nixos-config](https://github.com/Frost-Phoenix/nixos-con
 ---
 
 <!-- Links -->
+
 [Hyprland]: https://github.com/hyprwm/Hyprland
 [Kitty]: https://github.com/kovidgoyal/kitty
 [Starship]: https://github.com/starship/starship

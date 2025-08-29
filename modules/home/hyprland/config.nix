@@ -22,7 +22,7 @@
 
         ## App auto start
         "[workspace 1 silent] firefox"
-        "[workspace 2 silent] wezterm"
+        "[workspace 2 silent] alacritty"
         "[workspace 3 silent] keepassxc"
         "[workspace 4 silent] nautilus"
         "[workspace 5 silent] spotify"
@@ -132,7 +132,7 @@
         "$mainMod, F1, exec, show-keybinds"
 
         # keybindings
-        "$mainMod, Return, exec, wezterm"
+        "$mainMod, Return, exec, alacritty"
         "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] firefox'"
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen, 0"
