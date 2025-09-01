@@ -33,8 +33,8 @@ This repository contains a modular, flake-based NixOS configuration focused on a
 - **NetworkManager** for networking
 - **Btop** for system monitoring
 - **Nautilus** and **Yazi** for file management
-- **Catppuccin** theming (GTK, Waybar, etc.)
-- **MonoLisa** and **Nerd Fonts** for coding and UI
+- **Eldritch** theming (GTK, Waybar, etc.)
+- **Nerd Fonts** for coding and UI
 - **Bibata-Modern-Ice** cursor, **Papirus-Dark** icons
 - **Swaylock** and **Hyprlock** for lockscreen
 - **qView** for images, **mpv** for video, **audacious** for music

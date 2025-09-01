@@ -1,29 +1,32 @@
 { config, pkgs, ... }:
 
-  let
-    lock-false = {
-      Value = false;
-      Status = "locked";
-    };
-    lock-true = {
-      Value = true;
-      Status = "locked";
-    };
-  in
+let
+  lock-false = {
+    Value = false;
+    Status = "locked";
+  };
+  lock-true = {
+    Value = true;
+    Status = "locked";
+  };
+in
 {
   programs = {
     firefox = {
       enable = true;
-      languagePacks = [ "de" "en-US" ];
+      languagePacks = [
+        "de"
+        "en-US"
+      ];
 
       profiles.default.extensions.force = true;
-      /* ---- POLICIES ---- */
+      # ---- POLICIES ----
       # Check about:policies#documentation for options.
       policies = {
         DisableTelemetry = true;
         DisableFirefoxStudies = true;
         EnableTrackingProtection = {
-          Value= true;
+          Value = true;
           Locked = true;
           Cryptomining = true;
           Fingerprinting = true;
@@ -40,7 +43,7 @@
         DisplayMenuBar = "default-off"; # alternatives: "always", "never" or "default-on"
         SearchBar = "unified"; # alternative: "separate"
 
-        /* ---- EXTENSIONS ---- */
+        # ---- EXTENSIONS ----
         # Check about:support for extension/add-on ID strings.
         # Valid strings for installation_mode are "allowed", "blocked",
         # "force_installed" and "normal_installed".
@@ -66,12 +69,20 @@
             install_url = "https://addons.mozilla.org/firefox/downloads/file/4391954/refined_github-24.11.21.xpi";
             installation_mode = "force_installed";
           };
+          # Eldritch Theme:
+          "{f2bcd203-646c-4f72-8da5-092a671277cc}" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/file/4411593/eldritch-1.1.xpi";
+            installation_mode = "force_installed";
+          };
         };
-  
-        /* ---- PREFERENCES ---- */
+
+        # ---- PREFERENCES ----
         # Check about:config for options.
-        Preferences = { 
-          "browser.contentblocking.category" = { Value = "strict"; Status = "locked"; };
+        Preferences = {
+          "browser.contentblocking.category" = {
+            Value = "strict";
+            Status = "locked";
+          };
           "extensions.pocket.enabled" = lock-false;
           "extensions.screenshots.disabled" = lock-true;
           "browser.topsites.contile.enabled" = lock-false;

@@ -1,23 +1,25 @@
 { ... }:
-let custom = {
-  font = "JetBrainsMono Nerd Font";
-  font_size = "18px";
-  font_weight = "bold";
-  text_color = "#cad3f5";
-  background_0 = "#24273a";
-  background_1 = "#363a4f";
-  border_color = "#939ab7";
-  red = "#ed8796";
-  green = "#a6da95";
-  yellow = "#eed49f";
-  blue = "#8aadf4";
-  magenta = "#ee99a0";
-  cyant = "#8bd5ca";
-  orange = "#f5a97f";
-  opacity = "1";
-  indicator_height = "2px";
-};
-in 
+let
+  custom = {
+    # eldritch theme
+    font = "JetBrainsMono Nerd Font";
+    font_size = "18px";
+    font_weight = "bold";
+    text_color = "#ebfafa";
+    background_0 = "#212337";
+    background_1 = "#323449";
+    border_color = "#7081d0";
+    red = "#f16c75";
+    green = "#37f499";
+    yellow = "#f1fc79";
+    blue = "#04d1f9";
+    magenta = "#f265b5";
+    cyant = "#04d1f9";
+    orange = "#f7c67f";
+    opacity = "1";
+    indicator_height = "2px";
+  };
+in
 {
   programs.waybar.style = with custom; ''
     * {
@@ -32,7 +34,7 @@ in
     }
 
     window#waybar {
-      background: rgba(29, 32, 33, 0.5);
+      background: rgba(33, 35, 55, 0.5);
     }
 
     tooltip {

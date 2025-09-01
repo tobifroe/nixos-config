@@ -1,16 +1,16 @@
-{ pkgs, ... }: 
+{ pkgs, ... }:
 {
   home.packages = (with pkgs; [ rofi-wayland ]);
 
   xdg.configFile."rofi/theme.rasi".text = ''
     * {
-      bg-col: #1D2021;
-      bg-col-light: #282828;
-      border-col: #928374;
-      selected-col: #3C3836;
-      green: #98971A;
-      fg-col: #FBF1C7;
-      fg-col2: #EBDBB2;
+      bg-col: #212337;
+      bg-col-light: #323449;
+      border-col: #7081d0;
+      selected-col: #04d1f9;
+      green: #37f499;
+      fg-col: #a48cf2;
+      fg-col2: #f265b5;
       grey: #BDAE93;
       highlight: @green;
     }
@@ -125,5 +125,5 @@
       background-color: @bg-col;
       text-color: @green;
     }
-  '';  
+  '';
 }

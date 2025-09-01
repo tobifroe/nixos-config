@@ -1,8 +1,15 @@
-{ inputs, username, host, ... }: {
+{
+  inputs,
+  username,
+  host,
+  ...
+}:
+{
   imports = [
+    ./alacritty.nix # terminal emulator
     ./audacious.nix # music player
     ./bat.nix # better cat command
-    ./btop.nix # resouces monitor 
+    ./btop.nix # resouces monitor
     ./discord/discord.nix # discord
     ./fastfetch.nix # fetch tool
     ./firefox.nix # firefox browser

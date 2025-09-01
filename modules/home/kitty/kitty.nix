@@ -15,7 +15,7 @@
       scrollback_lines = 10000;
       enable_audio_bell = false;
       mouse_hide_wait = 60;
-      
+
       ## Tabs
       tab_title_template = "{index}";
       active_tab_font_style = "normal";
@@ -28,7 +28,7 @@
       inactive_tab_background = "#3C3836";
     };
 
-    keybindings = {  
+    keybindings = {
       ## Tabs
       "alt+1" = "goto_tab 1";
       "alt+2" = "goto_tab 2";

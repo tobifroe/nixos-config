@@ -1,4 +1,10 @@
-{ hostname, config, pkgs, host, ...}: 
+{
+  hostname,
+  config,
+  pkgs,
+  host,
+  ...
+}:
 {
   programs.zsh = {
     enable = true;
@@ -19,7 +25,7 @@
       setopt hist_expire_dups_first
       setopt hist_ignore_dups
       setopt hist_verify
-      
+
       # Use fd (https://github.com/sharkdp/fd) for listing path candidates.
       # - The first argument to the function ($1) is the base path to start traversal
       # - See the source code (completion.{bash,zsh}) for the details.
@@ -63,7 +69,7 @@
       man = "BAT_THEME='default' batman";
       s = "kitten ssh";
 
-      l = "eza --icons  -a --group-directories-first -1"; #EZA_ICON_SPACING=2
+      l = "eza --icons  -a --group-directories-first -1"; # EZA_ICON_SPACING=2
       ll = "eza --icons  -a --group-directories-first -1 --no-user --long";
       tree = "eza --icons --tree --group-directories-first";
 

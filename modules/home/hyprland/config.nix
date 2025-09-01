@@ -1,8 +1,8 @@
-{ ... }: 
+{ ... }:
 {
   wayland.windowManager.hyprland = {
     settings = {
-      
+
       # autostart
       exec-once = [
         "systemctl --user import-environment &"
@@ -10,15 +10,13 @@
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
         "nm-applet &"
         "wl-clip-persist --clipboard both"
-        # "swaybg -m fill -i $(find ~/Pictures/wallpapers/ -maxdepth 2 -type f) &"
-        "swaybg -m fill -i /home/tobif/Pictures/wallpapers/others/black5_unicat.png &"
+        "swaybg -m fill -i /home/tobif/Pictures/wallpapers/others/eldritch.png &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "poweralertd &"
         "waybar &"
         "swaync &"
         "wl-paste --watch cliphist store &"
         "hyprlock"
-        "docking"
 
         ## App auto start
         "[workspace 1 silent] firefox"
@@ -29,8 +27,8 @@
       ];
 
       input = {
-	kb_layout = "de,de";
-        kb_options ="grp:alt_caps_toggle"; 
+        kb_layout = "de,de";
+        kb_options = "grp:alt_caps_toggle";
         numlock_by_default = true;
         follow_mouse = 0;
         float_switch_override_focus = 0;
@@ -47,7 +45,7 @@
         gaps_in = 5;
         gaps_out = 5;
         border_size = 2;
-        "col.active_border" = "rgb(ee99a0) rgb(f5bde6) 45deg";
+        "col.active_border" = "rgb(a48cf2) rgb(37f499) 45deg";
         "col.inactive_border" = "0x00000000";
         no_border_on_floating = false;
       };

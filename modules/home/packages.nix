@@ -1,104 +1,106 @@
 { inputs, pkgs, ... }:
 {
-  home.packages = (with pkgs; [
+  home.packages = (
+    with pkgs;
+    [
 
-    ## CLI utility
-    air
-    ani-cli
-    ansible
-    bind
-    bitwise # cli tool for bit / hex manipulation
-    bottom
-    caligula # User-friendly, lightweight TUI for disk imaging
-    cliphist # clipboard manager
-    devenv
-    eza # ls replacement
-    entr # perform action when file change
-    fd # find replacement
-    ffmpeg
-    file # Show file information 
-    fluxcd
-    glib
-    go
-    gtrash # rm replacement, put deleted files in system trash
-    kubernetes-helm
-    hexdump
-    imv # image viewer
-    k9s
-    killall
-    klog-rs
-    kubectl
-    lazygit
-    libnotify
-    man-pages # extra man pages
-    minikube
-    mpv # video player
-    ncdu # disk space
-    nextcloud-client
-    nitch # systhem fetch util
-    nixpkgs-review
-    nodejs_22
-    openssl
-    onefetch # fetch utility for git repo
-    pamixer # pulseaudio command line mixer
-    playerctl # controller for media players
-    poweralertd
-    programmer-calculator
-    pipewire.jack
-    qview # minimal image viewer
-    restic
-    rclone
-    ripgrep # grep replacement
-    rust-analyzer
-    opentofu
-    socat
-    testdisk
-    tldr
-    timewarrior
-    unzip
-    uv
-    wl-clipboard # clipboard utils for wayland (wl-copy, wl-paste)
-    wget
-    yazi # terminal file manager
-    yt-dlp-light
-    xdg-utils
-    xxd
-    zellij
+      ## CLI utility
+      air
+      ani-cli
+      ansible
+      bind
+      bitwise # cli tool for bit / hex manipulation
+      bottom
+      caligula # User-friendly, lightweight TUI for disk imaging
+      cliphist # clipboard manager
+      devenv
+      eza # ls replacement
+      entr # perform action when file change
+      fd # find replacement
+      ffmpeg
+      file # Show file information
+      fluxcd
+      glib
+      go
+      gtrash # rm replacement, put deleted files in system trash
+      kubernetes-helm
+      hexdump
+      imv # image viewer
+      k9s
+      killall
+      klog-rs
+      kubectl
+      lazygit
+      libnotify
+      man-pages # extra man pages
+      minikube
+      mpv # video player
+      ncdu # disk space
+      nextcloud-client
+      nitch # systhem fetch util
+      nixpkgs-review
+      nodejs_22
+      openssl
+      onefetch # fetch utility for git repo
+      pamixer # pulseaudio command line mixer
+      playerctl # controller for media players
+      poweralertd
+      programmer-calculator
+      pipewire.jack
+      qview # minimal image viewer
+      restic
+      rclone
+      ripgrep # grep replacement
+      rust-analyzer
+      opentofu
+      socat
+      testdisk
+      tldr
+      timewarrior
+      unzip
+      uv
+      wl-clipboard # clipboard utils for wayland (wl-copy, wl-paste)
+      wget
+      yazi # terminal file manager
+      yt-dlp-light
+      xdg-utils
+      xxd
+      zellij
 
-    ## CLI 
-    cbonsai # terminal screensaver
-    cmatrix
-    pipes # terminal screensaver
-    sl
-    tty-clock # cli clock
+      ## CLI
+      cbonsai # terminal screensaver
+      cmatrix
+      pipes # terminal screensaver
+      sl
+      tty-clock # cli clock
 
-    ## GUI Apps
-    alacritty
-    code-cursor
-    element-desktop
-    keepassxc
-    ledger-live-desktop
-    libreoffice
-    nix-prefetch-github
-    obsidian
-    pavucontrol # pulseaudio volume controle (GUI)
-    prusa-slicer
-    qalculate-gtk # calculator
-    reaper
-    signal-desktop-bin
-    tidal-hifi
-    veracrypt
-    vial
-    vlc
+      ## GUI Apps
+      code-cursor
+      element-desktop
+      keepassxc
+      ledger-live-desktop
+      libreoffice
+      nix-prefetch-github
+      obsidian
+      pavucontrol # pulseaudio volume controle (GUI)
+      prusa-slicer
+      qalculate-gtk # calculator
+      reaper
+      signal-desktop-bin
+      tidal-hifi
+      veracrypt
+      vial
+      vlc
 
-    # C / C++
-    gcc
-    gdb
-    gnumake
+      # C / C++
+      gcc
+      gdb
+      gnumake
 
-    # Python
-    python3
+      # Python
+      python3
 
-    inputs.alejandra.defaultPackage.${system}
-  ]);
+      inputs.alejandra.defaultPackage.${system}
+    ]
+  );
 }
