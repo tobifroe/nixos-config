@@ -8,7 +8,7 @@ in
     # BACKGROUND
     background {
       monitor =
-      path = ${../../../wallpapers/otherWallpaper/gruvbox/kanagawa.png}
+      path = /home/tobif/Pictures/wallpapers/others/eldritch.png 
       blur_passes = 1
       contrast = 0.8916
       brightness = 0.8172

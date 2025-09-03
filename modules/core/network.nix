@@ -23,6 +23,14 @@
     };
   };
 
+  services.resolved = {
+    enable = true;
+    dnssec = "true";
+    domains = [ "~." ];
+    fallbackDns = [ "9.9.9.9" "149.112.112.112" ];
+    dnsovertls = "true";
+  };
+
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
   ];
