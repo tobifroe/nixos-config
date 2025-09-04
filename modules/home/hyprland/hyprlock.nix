@@ -28,7 +28,7 @@ in
     label {
       monitor = 
       text = cmd[update:1000] echo "$(date +"%k:%M")"
-      color = rgba(235, 219, 178, .9)
+      color = rgba(242, 101, 181, .9)
       font_size = 111
       font_family = JetBrainsMono NF Bold
       position = 0, 270
@@ -40,7 +40,7 @@ in
     label {
       monitor =
       text = cmd[update:1000] echo "- $(date +"%A, %B %d") -"
-      color = rgba(235, 219, 178, .9)
+      color = rgba(242, 101, 181, .9)
       font_size = 20
       font_family = FiraCode Nerd Font
       position = 0, 160
@@ -68,7 +68,7 @@ in
     label {
       monitor =
       text =   $USER
-      color = rgba(235, 219, 178, .9)
+      color = rgba(242, 101, 181, .9)
       font_size = 16
       font_family = FiraCode Nerd Font
       position = 0, -230
@@ -87,8 +87,8 @@ in
       dots_center = true
       outer_color = rgba(255, 255, 255, 0)
       inner_color = rgba(225, 225, 225, 0.2)
-      color = rgba(235, 219, 178, .9)
-      font_color = rgba(235, 219, 178, .9)
+      color = rgba(242, 101, 181, .9)
+      font_color = rgba(242, 101, 181, .9)
       fade_on_empty = false
       placeholder_text = <i><span foreground="##ebdbb2e5">Enter Password</span></i>
       hide_input = false
